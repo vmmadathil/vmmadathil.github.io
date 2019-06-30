@@ -1,161 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/default.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/layout.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/media-queries.css">
+    <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
+      
+    <script src="%PUBLIC_URL%/js/modernizr.js"></script>
     <title>Visakh Madathil</title>
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
-		<nav id="menu" class="navbar navbar-default navbar-fixed-top bg-menu">
-  		<div class="container">
-    		<div class="navbar-header">
-      		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-      		</button>
-      		<a id="navBrand" class="navbar-brand" href="#">Visakh Madathil</a>
-    		</div>
-    		<div class="collapse navbar-collapse" id="myNavbar">
-      		<ul id="list" class="nav navbar-nav navbar-right">
-						<li id="emptyHolder"><a class="active holder" href="#">holder</a></li>	
-				<li><a href="#about">About</a></li>
-        		<li><a href="#selected-work">Selected Work</a></li>
-				<li><a href="#social">Connect</a></li>
-				<li><a href="https://medium.com/@madathilvisakh" target="_blank">Blog</a></li>	
-      		</ul>
-    		</div>
-  		</div>
-		</nav>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/waypoints.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/magnific-popup.js"></script>
+    <script src="js/init.js"></script>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-		<div id="terminal" class="bg-2 text-center jumbotron">
-			<div id="terminalScreen" class="container-fluid term">
-				<h1><span id="caption"></span><span id="cursor">|</span></h1>
-				<a href="#about"><span id="arrow" class="glyphicon glyphicon-menu-down dont-show-arrow"></span></a>
-			</div>
-		</div>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-		<div id="about" class="container-fluid text-center bg-1">
-			<h2>About</h2>
-			<br>
-			<!-- img src="./images/fibonacci.jpg" alt="Visakh Madathil" class="img-circle img-responsive profile"-->
-			<br>
-			<p class="justify">
-			I use data and build technology to create economic and business impact and change. I'm a budding writer (of words and code), economist, and machine learning engineer. I spend my time using data and technology to create sustainable change, so I think a lot about economic development, impactful business models, and the various impacts of automation and AI.
-			<br>
-			<br>
-			I'm currently exploring the impacts of automation and building intelligent systems to solve social and business problems at <a href="https://smu.edu" target="_blank">Southern Methodist University</a>, where I study Economics and Physics. Previously, I was a Data Science Fellow at the <a href= "https://www.hhs.gov/cto/index.html">US Department of Health and Human Services</a>, as part of the <a href="https://www.codingitforward.com/fellowship">Civic Digital Fellowship</a>. I worked as an Analytics and Development Intern at G6 Hospitality and on various political campaigns, using economic and social data to better business impact. I mainly work in Predictive Modeling & Econometric Modeling, Natural Language Processing, and Policy Analysis, but I am always trying to learn new skills ― like making this website to learn web development.
-			<br>
-			<br>
-			I enjoy watching sports, drinking tea, and listening to hip-hop in my free time. I also spend my time reading about foreign policy, healthcare, and music.
-			<br>
-			<br> 
-		</div>
-
-		<div id="selected-work" class="container-fluid text-center bg-2">
-			<h2>Selected Work</h2>
-			<p>Click to learn more about some projects I've enjoyed. Feel free to look at my <a href="https://www.github.com/vmmadathil/" target="_blank">GitHub</a> and my <a href ="./files/Visakh_Madathil_Resume.pdf" download>Resume</a> as well!</p>
-			
-			<div class="row">
-				<div id="HHSReport" class="col-sm-6">
-					<h4>NLP Classifier & HHS Data Sharing Report</h4>
-					<a href="#neuroLab" data-toggle="modal">
-						<div class="overlay">
-						</div>
-						<img src="./images/HHSReport.PNG" alt="HHSReport" class="btn-img btn btn-lg">
-					</a>
-					<div id="neuroLab" class="modal fade" role="dialog">
-  					<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-								</div>
-      					<div class="modal-body bg-1 container-fluid">
-									<h3 class="modal-title">NLP Classifier & HHS State of Data Sharing Report</h3>
-									<br>
-									<img src="./images/HHSReport.PNG" alt="HHS Report" class="modal-img">
-									<br>
-        					<p class="justify">During my time at the US Department of Health and Human Services, I helped assess the state of data sharing. We were able to identify barriers to data sharing and create a comprehensive, published report that I helped co-author. I created an NLP-text classifier in Python that classifies emails sent to HealthData.gov, allowing administrators to quickly resolve issues with open data sets. </p>
-									<br>
-									<a href ="./files/HHS_StateofDataSharing_0915.pdf" download class="project-link">HHS State of Data Sharing</a>
-      					</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="Economics" class="col-sm-6">
-					<h4>AI, Robots, and US Labor Markets & Public Health</h4>
-					<a href="#coffeeTime" data-toggle="modal">
-						<div class="overlay">
-						</div>
-						<img src="images/Econometrics.PNG" alt="Economics" class="btn-img btn btn-lg">
-					</a>
-					<div id="coffeeTime" class="modal fade" role="dialog">
-						<div class="modal-dialog modal-lg">
-							<div class="modal-content">
-								<div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal">&times;</button>
-								</div>
-						<div class="modal-body bg-1 container-fluid">
-									<h3 class="modal-title">AI, Robots, and US Labor Markets & Public Health</h3>
-									<br>
-									<img src="images/Econometrics.PNG" alt="Economics" class="modal-img">
-									<br>
-							<p class="justify">My current and long standing research project at Southern Methodist University. I am exploring how automation and artifical intelligence, represented by intelligent industrial robots, affect labor market outcomes and opioid usage in American communities. Through econometric modeling, I've found that the introduction of these robots have negative effects on wages and employment and increases the usage of various opioids. Much of the analysis was completed in R and STATA.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-		</div>
-
-		<div id="social" class="container-fluid text-center bg-1">
-			<h2>Connect</h2>
-			<br>
-
-			<div id="socialLinks" class="row">
-				<div id="email" class="col-md-2 col-md-offset-1">
-					<li><a href ="mailto:madathilvisakh@gmail.com" target="_blank" class="connectLink"><p>
-						<img src = "./images/email.png" class="img-responsive logo-small"></p></a></li>
-				</div>
-				<div id="medium" class="col-md-2">
-					<li><a href ="https://medium.com/@madathilvisakh" target="_blank" class="connectLink"><p>
-						<img src = "./images/medium.png" class="img-responsive logo-small"></p></a></li>
-				</div>
-  				<div id="linkedin" class="col-md-2">
-					<li><a href ="https://www.linkedin.com/in/visakh-madathil" target="_blank" class="connectLink"><p>
-						<img src = "./images/linkedin.svg" class="img-responsive logo-small"></p></a></li>
-				</div>
-  				<div id="github" class="col-md-2">
-					<li><a href ="https://github.com/vmmadathil" target="_blank" class="connectLink"><p>
-						<img src = "./images/github.svg" class="img-responsive logo-small"></p></a></li>
-				</div>
-				<div id="twitter" class="col-md-2">
-				<li><a href="https://twitter.com/MadathilVisakh" target="_blank" class="connectLink"><p>
-					<img src = "./images/tweet.png" class="img-responsive logo-small"></p></a></li>
-				</div>
-			</div>
-			<br>
-			<p>I'm always looking for new projects, so feel free to reach out!</p>
-		</div>
-
-		<footer id="trailer" class="container-fluid text-center bg-2 nopad">
-			<p>2019 &#169; Visakh Madathil. Thank you to Chandranshu Rao.</p>
-		</footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <script src="./js/bootstrap.min.js"></script>
-		<script src="./js/scroll.js"></script>
-		<script src="./js/terminalView.js"></script>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
   </body>
 </html>
